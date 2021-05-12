@@ -24,4 +24,4 @@ let pokemonRepository = (function () {
 })()
 
 pokemonRepository.getAll().forEach(function (item) {
-  console.log(item)})
+  console.log(item.name + " has a Height of " + item.height + " Type: "+ item.type)})
