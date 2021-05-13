@@ -24,4 +24,10 @@ let pokemonRepository = (function () {
 })()
 
 pokemonRepository.getAll().forEach(function (item) {
-  console.log(item.name + " has a Height of " + item.height + " Type: "+ item.type)})
+  if(item.height<8){
+    document.write('<p>' + item.name + 'height ' + item.height + ' This is a small pokemon </p>')
+  }else if( item.height>16){
+    document.write('<p>' + item.name + ' height ' + item.height + ' Wow, this is a big pokemon </p>')
+  }else(
+    document.write( '<p>' + item.name + ' height ' + item.height + ' This is a average size pokemin </p>')
+  )})
