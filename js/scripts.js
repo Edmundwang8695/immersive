@@ -16,18 +16,35 @@ let pokemonRepository = (function () {
       console.log('this is not a pokemon')
     }
   }
+  function addListItem(item){
+    let pokemonlist = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+
+    button.innerText = item.name;
+    button.classList.add('button-class');
+    button.addEventListener('click', function(){
+      showDetails(item);
+    })
+
+    listItem.appendChild(button);
+    pokemonlist.appendChild(listItem);
+
+
+    }
+    function showDetails(item){
+      console.log(item);
+  }
 
   return {
     getAll: getAll,
     add: add,
-  }
+    addListItem: addListItem,
+    showDetails: showDetails,
+  };
 })()
 
 pokemonRepository.getAll().forEach(function (item) {
-  if(item.height<8){
-    document.write('<p>' + item.name + 'height ' + item.height + ' This is a small pokemon </p>')
-  }else if( item.height>16){
-    document.write('<p>' + item.name + ' height ' + item.height + ' Wow, this is a big pokemon </p>')
-  }else(
-    document.write( '<p>' + item.name + ' height ' + item.height + ' This is a average size pokemin </p>')
-  )})
+  pokemonRepository.addListItem(item);
+  pokemonRepository.getAll();
+});

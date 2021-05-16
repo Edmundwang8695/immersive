@@ -1,3 +1,16 @@
-.text{
-    display: grid;
+.button-class {
+    background-color: chartreuse;
+    border: none;
+    color:cornsilk;
+    padding: 20px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px 15px;
+    color: black;
+    background-color: blanchedalmond;
+    border: 2px solid yellow;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }

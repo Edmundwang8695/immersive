@@ -1,0 +1,15 @@
+.button-class {
+    background-color: chartreuse;
+    border: none;
+    color:cornsilk;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+    background-color: blanchedalmond;
+    border: 2px solid yellow;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
