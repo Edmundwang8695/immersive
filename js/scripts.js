@@ -6,8 +6,25 @@ let pokemonRepository = (function () {
 
     { name: 'butterfree', height: 15, type: ['bug', 'flying'] },
   ]
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
   function getAll() {
     return pokemonList
+  }
+  function loadList() {
+    return fetch(apiUrl).then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e);
+    })
   }
   function add(item) {
     if (typeof pokemon === 'object') {
@@ -44,7 +61,9 @@ let pokemonRepository = (function () {
   };
 })()
 
-pokemonRepository.getAll().forEach(function (item) {
-  pokemonRepository.addListItem(item);
-  pokemonRepository.getAll();
+pokemonRepository.loadList().then(function() {
+  // Now the data is loaded!
+  pokemonRepository.getAll().forEach(function(pokemon){
+    pokemonRepository.addListItem(pokemon);
+  });
 });
