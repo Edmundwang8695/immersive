@@ -1,70 +1,85 @@
 .button-class {
     background-color: chartreuse;
-    border: none;
+    border: cadetblue;
     color:cornsilk;
     padding: 20px 30px;
     text-align: center;
-    display: inline-block;
+    display: grid;
     font-size: 15px;
     cursor: pointer;
     margin: 5px 15px;
     color: black;
     background-color: blanchedalmond;
     border: 2px solid yellow;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 3s;
+    transition-duration: 3s;
     list-style: none;
     list-style-type: none;
+    justify-content: center;
 }
 
-.modal-container {
-    display: none;
+#modal-container {
+  display: none;
+  position: fixed;
+  padding: 20px;
+  border: 2px solid olive;
+  box-sizing: border-box;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgba(145, 131, 209, 0.4);
+  align-self: center;
 }
-
-.modal-container.is-visible{
-    display: none;
-    position: fixed;
-    padding: 20px;
-    border: olive;
-    box-sizing: border-box;
-    top:0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: auto;
-    z-index: 1;
-    background:silver;
-    justify-self: center;
+#modal-container.is-visible{
+  display: grid;
 }
 
 .modal{
 margin: auto;
 display: inline-block;
 position: fixed;
-border: black;
+border: 2px solid black;
 box-sizing: border-box;
 padding: 10px;
 overflow: auto;
 z-index: 999;
-width: 50%;
+width: 450px;
 max-width: 700px;;
-background-color: rgba(0,0,0,0.5); /*Black w/ opacity */
-justify-content: center;
+background-color: rgba(206, 113, 113, 0.9); /*Black w/ opacity */
+align-self: center;
 } 
 
 .modal-close {
-    float: right;
+    text-align: end;
     -webkit-appearance: none;
-    border: 0;
+    font-size: medium;
     background: none;
-    color: #777;
-  }
+    color: rgb(51, 245, 3);
+    text-decoration: underline;
+    }
   
 .modal h1 {
     margin-top: 0;
+    background-color: cornsilk;
   }
   
 .modal p {
-    margin-bottom: 0;
+    display: block;
+    font-size: large;
+    font-weight: 100;
+    text-align: right;
+    text-justify: auto;
+    padding: 20px;
   }
+
+.modal img {
+ margin: 0 auto;
+  float: left;
+  width: 40%;
+  height: 40%;
+  box-sizing: border-box;
+}
