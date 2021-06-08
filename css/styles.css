@@ -1,4 +1,4 @@
-.button-class {
+.modal-body {
     background-color: chartreuse;
     border: cadetblue;
     color:cornsilk;
@@ -10,7 +10,7 @@
     margin: 5px 15px;
     color: black;
     background-color: blanchedalmond;
-    border: 2px solid yellow;
+    border: 2px solid rgba(243, 220, 10, 0.993);
     -webkit-transition-duration: 3s;
     transition-duration: 3s;
     list-style: none;
@@ -24,7 +24,7 @@
   display: none;
   position: fixed;
   padding: 20px;
-  border: 2px solid olive;
+  border: 2px solid rgb(32, 32, 29);
   box-sizing: border-box;
   top:0;
   left: 0;
@@ -40,26 +40,15 @@
 }
 
 .modal{
-margin: auto;
-display: inline-block;
-text-align: center;
-justify-self: stretch;
-border: 2px solid black;
-box-sizing: border-box;
-padding: 10px;
-overflow: auto;
-z-index: 999;
-width: 450px;
-max-width: 700px;;
-background-color: rgba(20, 182, 87, 0.432); /*Black w/ opacity */
-align-self: center;
+background-color: rgba(48, 146, 89, 0.432);
 } 
 
 .body{
   justify-self: center;
   text-align: center;
   font-family: 'Grandstander', cursive;
-  background-color: khaki;
+  background-color: rgba(247, 228, 23, 0.87);
+  padding: 1px 6px;
 }
 .modal-close {
     text-align: end;
@@ -74,23 +63,28 @@ align-self: center;
 
 }
 .pokedex {
-  font-display:inherit;
+  border-radius:50px;
+  border: block;
+  font-display:bold;
   font-size: 150px;
-  border: rgb(255, 174, 0) solid 2px;
+  border: rgb(2, 2, 2) solid 10px;
+  box-shadow: violet 5px;
+  align-self: center;
+  background-color: rgb(244, 247, 112);
 }
-.modal h1 {
+/* .modal h1 {
     margin-top: 0;
     background-color: cornsilk;
-  }
+  } */
   
-.modal p {
+/* .modal p {
     display: block;
     font-size: large;
     font-weight: 100;
     text-align: right;
     text-justify: auto;
     padding: 20px;
-  }
+  } */
 
 .modal img {
  margin: 0 auto;
