@@ -64,11 +64,8 @@ background-color: rgba(48, 146, 89, 0.432);
 }
 .pokedex {
   border-radius:50px;
-  border: block;
-  font-display:bold;
   font-size: 150px;
   border: rgb(2, 2, 2) solid 10px;
-  box-shadow: violet 5px;
   align-self: center;
   background-color: rgb(244, 247, 112);
 }
